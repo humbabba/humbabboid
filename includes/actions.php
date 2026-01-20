@@ -24,9 +24,41 @@ add_action('after_setup_theme', 'humbabboidSetup');
 
 function humbabboidEnqueue()
 {
-    wp_enqueue_style('humbabboid-style', get_stylesheet_uri());
+    wp_enqueue_style(
+            'theme-css',
+            get_template_directory_uri() . '/dist/css/frontend/style.css',
+            [],
+            filemtime(get_template_directory() . '/dist/css/frontend/style.css')
+    );
+
+    wp_enqueue_script(
+            'theme-js',
+            get_template_directory_uri() . '/dist/js/frontend/app.js',
+            [],
+            filemtime(get_template_directory() . '/dist/js/frontend/app.js'),
+            true
+    );
 }
 add_action('wp_enqueue_scripts', 'humbabboidEnqueue');
+
+function humbabboidAdminEnqueue()
+{
+    wp_enqueue_style(
+            'admin-css',
+            get_template_directory_uri() . '/dist/css/admin/style.css',
+            [],
+            filemtime(get_template_directory() . '/dist/css/admin/style.css')
+    );
+
+    wp_enqueue_script(
+            'admin-js',
+            get_template_directory_uri() . '/dist/js/admin/app.js',
+            [],
+            filemtime(get_template_directory() . '/dist/js/admin/app.js'),
+            true
+    );
+}
+add_action('admin_enqueue_scripts', 'humbabboidAdminEnqueue');
 function humbabboidFooter()
 {
     ?>

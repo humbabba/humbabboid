@@ -1,5 +1,4 @@
 <?php
-
 function humbabboidGetSchemaType()
 {
     $schema = 'https://schema.org/';

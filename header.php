@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class('m-[0px]'); ?>>
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
-    <header id="header" role="banner">
+    <header id="header" role="banner" class="flex">
         <?php get_template_part('template-parts/components/branding'); ?>
         <?php get_template_part('template-parts/nav/top'); ?>
     </header>
