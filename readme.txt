@@ -1,8 +1,7 @@
 === humbabboid ===
 
-Contributors:
-Donate link:
-Theme link:
+Contributors: Charles Gray
+Theme link: https://sublogicalendeavors.com
 Tags: accessibility-ready, translation-ready
 Requires at least: 5.2
 Tested up to: 6.8
@@ -12,3 +11,4 @@ License URI: https://www.gnu.org/licenses/gpl.html
 
 == Description ==
 
+Just another WordPress theme. Originally a copy of BlankSlate, https://blankslate.me/.
